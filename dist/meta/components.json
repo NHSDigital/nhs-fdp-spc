@@ -1,0 +1,1146 @@
+{
+  "version": "0.0.44-alpha.18",
+  "generatedAt": "2025-11-10T21:52:32.904Z",
+  "count": 18,
+  "components": {
+    "Textarea": {
+      "name": "Textarea",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Supports aria-describedby for associating hint and error message text.",
+        "Label element should reference textarea id for accessible name."
+      ],
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "description": "Unique id"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Form field name"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "description": "Controlled value"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "description": "Uncontrolled default value"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "description": "Placeholder text"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Disabled state"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Read-only state"
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Required indicator"
+        },
+        {
+          "name": "hasError",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Error style"
+        },
+        {
+          "name": "describedBy",
+          "type": "string",
+          "description": "Space-separated ids of hint/error elements"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        },
+        {
+          "name": "rows",
+          "type": "number",
+          "defaultValue": "5",
+          "description": "Visible text lines (rows)"
+        },
+        {
+          "name": "cols",
+          "type": "number",
+          "description": "Visible character widths (cols)"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "description": "Max length"
+        },
+        {
+          "name": "minLength",
+          "type": "number",
+          "description": "Min length"
+        },
+        {
+          "name": "wrap",
+          "type": "'hard'|'soft'|'off'",
+          "defaultValue": "soft",
+          "description": "Wrapping mode"
+        },
+        {
+          "name": "resize",
+          "type": "'none'|'both'|'horizontal'|'vertical'",
+          "defaultValue": "vertical",
+          "description": "Resize capability (applies modifier class)"
+        },
+        {
+          "name": "autoComplete",
+          "type": "string",
+          "description": "Autocomplete attribute"
+        },
+        {
+          "name": "spellCheck",
+          "type": "boolean",
+          "description": "Spell check attribute"
+        }
+      ],
+      "source": "src/components/Textarea/Textarea.schema.ts"
+    },
+    "Tag": {
+      "name": "Tag",
+      "category": "meta",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Close button (when closable) is a native button with aria-label \"Remove\"."
+      ],
+      "props": [
+        {
+          "name": "text",
+          "type": "string",
+          "description": "Plain text content"
+        },
+        {
+          "name": "html",
+          "type": "string",
+          "description": "HTML string content (overrides text)"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode|string",
+          "description": "Children content (highest precedence)"
+        },
+        {
+          "name": "color",
+          "type": "'default'|'white'|'grey'|'green'|'aqua-green'|'blue'|'purple'|'pink'|'red'|'orange'|'yellow'",
+          "defaultValue": "default",
+          "description": "Visual color variant",
+          "enum": [
+            "default",
+            "white",
+            "grey",
+            "green",
+            "aqua-green",
+            "blue",
+            "purple",
+            "pink",
+            "red",
+            "orange",
+            "yellow"
+          ]
+        },
+        {
+          "name": "noBorder",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Removes border style"
+        },
+        {
+          "name": "closable",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Displays close (×) control"
+        },
+        {
+          "name": "onClose",
+          "type": "() => void",
+          "description": "Callback when close button clicked"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Disables close interaction"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        }
+      ],
+      "source": "src/components/Tag/Tag.schema.ts"
+    },
+    "Select": {
+      "name": "Select",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Supports aria-describedby for associating hint and error message text.",
+        "Accepts aria-label when external visible label is not present.",
+        "Multiple selection variant sets multiple/size attributes."
+      ],
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "description": "Unique id"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Form field name"
+        },
+        {
+          "name": "ariaLabel",
+          "type": "string",
+          "description": "Accessible label when separate label element not used"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "description": "Controlled value"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "description": "Uncontrolled default value"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Disabled state"
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Required indicator"
+        },
+        {
+          "name": "hasError",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Error style"
+        },
+        {
+          "name": "describedBy",
+          "type": "string",
+          "description": "Space-separated ids of hint/error elements"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        },
+        {
+          "name": "multiple",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Multiple selection allowed"
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "description": "Visible option count (for multiple)"
+        },
+        {
+          "name": "autoComplete",
+          "type": "string",
+          "description": "Autocomplete attribute"
+        },
+        {
+          "name": "options",
+          "type": "Array<{ value: string; text: string; disabled?: boolean; selected?: boolean }>",
+          "description": "Inline options array (alternative to body content)"
+        }
+      ],
+      "source": "src/components/Select/Select.schema.ts"
+    },
+    "Radios": {
+      "name": "Radios",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Keyboard arrow navigation cycles through options.",
+        "Conditional content container is hidden with --hidden class when inactive."
+      ],
+      "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Group name"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "description": "Controlled selected value"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "description": "Uncontrolled initial value"
+        },
+        {
+          "name": "hasError",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Error style"
+        },
+        {
+          "name": "describedBy",
+          "type": "string",
+          "description": "aria-describedby id list"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Extra CSS classes"
+        },
+        {
+          "name": "size",
+          "type": "'normal'|'small'",
+          "defaultValue": "normal",
+          "description": "Size variant"
+        },
+        {
+          "name": "inline",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Inline layout"
+        },
+        {
+          "name": "options",
+          "type": "Array<{ value: string; text: string; hint?: string; disabled?: boolean; conditional?: any }>",
+          "required": true,
+          "description": "Radio options"
+        }
+      ],
+      "source": "src/components/Radios/Radios.schema.ts"
+    },
+    "Panel": {
+      "name": "Panel",
+      "category": "content",
+      "since": "0.1.1",
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        },
+        {
+          "name": "headingText",
+          "type": "string",
+          "description": "Heading text (ignored if headingHtml is provided)"
+        },
+        {
+          "name": "headingHtml",
+          "type": "string",
+          "description": "Heading HTML (overrides headingText)"
+        },
+        {
+          "name": "headingLevel",
+          "type": "1|2|3|4|5|6",
+          "defaultValue": "2",
+          "description": "Heading level to render for the heading"
+        },
+        {
+          "name": "bodyText",
+          "type": "string",
+          "description": "Body text (ignored if bodyHtml is provided)"
+        },
+        {
+          "name": "bodyHtml",
+          "type": "string",
+          "description": "Body HTML (overrides bodyText)"
+        }
+      ],
+      "source": "src/components/Panel/Panel.schema.ts"
+    },
+    "Label": {
+      "name": "Label",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Supports page heading mode by rendering an <h1> containing a nested <label> to retain association."
+      ],
+      "props": [
+        {
+          "name": "htmlFor",
+          "type": "string",
+          "description": "ID of associated form control"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        },
+        {
+          "name": "isPageHeading",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Render as page heading (h1 wrapper)"
+        },
+        {
+          "name": "size",
+          "type": "'xl'|'l'|'m'|'s'",
+          "defaultValue": "m",
+          "description": "Size variant"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode|string",
+          "required": true,
+          "description": "Label content"
+        }
+      ],
+      "source": "src/components/Label/Label.schema.ts"
+    },
+    "InsetText": {
+      "name": "InsetText",
+      "category": "content",
+      "since": "0.1.1",
+      "props": [
+        {
+          "name": "text",
+          "type": "string",
+          "description": "Plain text content (ignored if html is provided)"
+        },
+        {
+          "name": "html",
+          "type": "string",
+          "description": "HTML content (overrides text)"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        }
+      ],
+      "source": "src/components/InsetText/InsetText.schema.ts"
+    },
+    "Input": {
+      "name": "Input",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Supports aria-describedby for associating hint and error message text.",
+        "Range variant exposes current/min/max values for assistive clarity when labels enabled."
+      ],
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "description": "Unique id"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Form field name"
+        },
+        {
+          "name": "type",
+          "type": "'text'|'email'|'password'|'tel'|'url'|'search'|'number'|'range'",
+          "defaultValue": "text",
+          "description": "Input type"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "description": "Controlled value"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "description": "Uncontrolled default value"
+        },
+        {
+          "name": "placeholder",
+          "type": "string",
+          "description": "Placeholder text"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Disabled state"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Read-only state"
+        },
+        {
+          "name": "required",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Required indicator"
+        },
+        {
+          "name": "hasError",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Error style"
+        },
+        {
+          "name": "describedBy",
+          "type": "string",
+          "description": "Space-separated ids of hint/error elements"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        },
+        {
+          "name": "width",
+          "type": "'full'|'20'|'10'|'5'|'4'|'3'|'2'",
+          "defaultValue": "full",
+          "description": "Width variant (non-range only)"
+        },
+        {
+          "name": "inputMode",
+          "type": "'text'|'email'|'tel'|'url'|'numeric'|'decimal'|'search'",
+          "description": "Input mode hint for soft keyboards"
+        },
+        {
+          "name": "autoComplete",
+          "type": "string",
+          "description": "Autocomplete attribute"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "description": "Max length"
+        },
+        {
+          "name": "minLength",
+          "type": "number",
+          "description": "Min length"
+        },
+        {
+          "name": "pattern",
+          "type": "string",
+          "description": "Validation pattern"
+        },
+        {
+          "name": "step",
+          "type": "string|number",
+          "description": "Step (number/range)"
+        },
+        {
+          "name": "min",
+          "type": "string|number",
+          "description": "Min value (number/range)"
+        },
+        {
+          "name": "max",
+          "type": "string|number",
+          "description": "Max value (number/range)"
+        },
+        {
+          "name": "showValueLabels",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Show min/max labels (range)"
+        },
+        {
+          "name": "showCurrentValue",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Show current value label (range)"
+        },
+        {
+          "name": "valueLabels",
+          "type": "{ min?: string; max?: string; current?: string }",
+          "description": "Custom range label text"
+        }
+      ],
+      "source": "src/components/Input/Input.schema.ts"
+    },
+    "Hint": {
+      "name": "Hint",
+      "category": "typography",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Provides supporting contextual help text associated with a form field or section."
+      ],
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "HTML id attribute"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode|string",
+          "required": true,
+          "description": "Hint content"
+        }
+      ],
+      "source": "src/components/Hint/Hint.schema.ts"
+    },
+    "Heading": {
+      "name": "Heading",
+      "category": "typography",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Allows separation of visual size from semantic level to maintain proper document outline."
+      ],
+      "props": [
+        {
+          "name": "level",
+          "type": "1|2|3|4|5|6",
+          "description": "Semantic heading level (h1-h6); auto-derived from size if omitted"
+        },
+        {
+          "name": "size",
+          "type": "'xs'|'s'|'m'|'l'|'xl'|'xxl'",
+          "description": "Visual size variant"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "description": "Plain text content"
+        },
+        {
+          "name": "html",
+          "type": "string",
+          "description": "HTML content (unsafe unless trusted); ignored if children provided"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode|string",
+          "description": "Explicit node content overrides text/html"
+        },
+        {
+          "name": "marginBottom",
+          "type": "string",
+          "description": "Custom CSS margin-bottom value"
+        }
+      ],
+      "source": "src/components/Heading/Heading.schema.ts"
+    },
+    "Fieldset": {
+      "name": "Fieldset",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Wraps related form controls with an accessible legend.",
+        "Legend can optionally render as an h1 for page-level grouping when isPageHeading is true."
+      ],
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode|string",
+          "required": true,
+          "description": "Fieldset content (form controls and supporting markup)"
+        },
+        {
+          "name": "legend",
+          "type": "{ text?: string; html?: string; className?: string; size?: \"xl\"|\"l\"|\"m\"|\"s\"; isPageHeading?: boolean }",
+          "description": "Legend configuration (text or HTML plus optional size & page heading role)"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes for the fieldset"
+        },
+        {
+          "name": "describedBy",
+          "type": "string",
+          "description": "Space-separated list of element IDs that describe the fieldset"
+        }
+      ],
+      "source": "src/components/Fieldset/Fieldset.schema.ts"
+    },
+    "ErrorSummary": {
+      "name": "ErrorSummary",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Focuses programmatically on mount in React; macro/static render initial markup without auto-focus (handled by enhancement script if added).",
+        "Provides role=\"alert\" and an H2 title with aria-labelledby for screen reader context."
+      ],
+      "props": [
+        {
+          "name": "titleText",
+          "type": "string",
+          "defaultValue": "\"There is a problem\"",
+          "description": "Summary title text (ignored if titleHtml provided)"
+        },
+        {
+          "name": "titleHtml",
+          "type": "string",
+          "description": "Raw HTML for title (takes precedence over titleText)"
+        },
+        {
+          "name": "descriptionText",
+          "type": "string",
+          "description": "Description text (ignored if descriptionHtml or children provided)"
+        },
+        {
+          "name": "descriptionHtml",
+          "type": "string",
+          "description": "Description HTML (takes precedence over descriptionText unless children provided)"
+        },
+        {
+          "name": "errorList",
+          "type": "Array<{ text?: string; html?: string; href?: string; attributes?: Record<string, any> }>",
+          "required": true,
+          "description": "List of error items displayed under the description"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes for root container"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode|string",
+          "description": "Custom description content (overrides descriptionText/Html)"
+        }
+      ],
+      "source": "src/components/ErrorSummary/ErrorSummary.schema.ts"
+    },
+    "ErrorMessage": {
+      "name": "ErrorMessage",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Includes visually hidden prefix text (default \"Error:\") to aid screen reader users."
+      ],
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "HTML id attribute"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        },
+        {
+          "name": "visuallyHiddenText",
+          "type": "string",
+          "defaultValue": "Error:",
+          "description": "Prefix announced to screen readers"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode|string",
+          "required": true,
+          "description": "Error message content"
+        }
+      ],
+      "source": "src/components/ErrorMessage/ErrorMessage.schema.ts"
+    },
+    "Details": {
+      "name": "Details",
+      "category": "content",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Uses native <details> and <summary> elements for disclosure.",
+        "Summary is focusable; body content announced when expanded."
+      ],
+      "props": [
+        {
+          "name": "summaryText",
+          "type": "string",
+          "description": "Text for the summary (clickable)"
+        },
+        {
+          "name": "summaryHtml",
+          "type": "string",
+          "description": "HTML for the summary (overrides summaryText)"
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "description": "Text content for the details body"
+        },
+        {
+          "name": "html",
+          "type": "string",
+          "description": "HTML content for the details body (overrides text)"
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Whether the details is open by default"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Unique identifier"
+        }
+      ],
+      "source": "src/components/Details/Details.schema.ts"
+    },
+    "DateInput": {
+      "name": "DateInput",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Groups day/month/year inputs with shared hint/error via describedBy.",
+        "Field-level validation errors (client side state in React) are not present in initial SSR/macro output."
+      ],
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "description": "Root id used as prefix for generated input IDs and hint/error IDs"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional classes for the date input wrapper"
+        },
+        {
+          "name": "items",
+          "type": "Array<{ name: string; label?: string; value?: string; classes?: string; id?: string; inputmode?: string; autocomplete?: string; pattern?: string }>",
+          "description": "Explicit configuration of day/month/year items (fallback defaults applied when omitted)"
+        },
+        {
+          "name": "namePrefix",
+          "type": "string",
+          "description": "Prefix to wrap submitted field names e.g. prefix[day]"
+        },
+        {
+          "name": "values",
+          "type": "{ day?: string; month?: string; year?: string }",
+          "description": "Initial values for each field"
+        },
+        {
+          "name": "fieldset",
+          "type": "{ legend?: string; classes?: string; describedBy?: string }",
+          "description": "Optional fieldset wrapper and legend text"
+        },
+        {
+          "name": "hint",
+          "type": "{ text?: string; html?: string; classes?: string }",
+          "description": "Hint configuration (before error message)"
+        },
+        {
+          "name": "errorMessage",
+          "type": "{ text?: string; html?: string; classes?: string }",
+          "description": "Group level error message (adds error state styles)"
+        }
+      ],
+      "source": "src/components/DateInput/DateInput.schema.ts"
+    },
+    "Checkboxes": {
+      "name": "Checkboxes",
+      "props": [
+        {
+          "name": "items",
+          "type": "CheckboxItem[]",
+          "required": true,
+          "description": "Array of checkbox items"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Shared name attribute"
+        },
+        {
+          "name": "idPrefix",
+          "type": "string",
+          "description": "ID prefix for fieldset and inputs"
+        },
+        {
+          "name": "legend",
+          "type": "string",
+          "description": "Legend text"
+        },
+        {
+          "name": "isPageHeading",
+          "type": "boolean",
+          "description": "Legend rendered as page heading"
+        },
+        {
+          "name": "legendSize",
+          "type": "\"xl\"|\"l\"|\"m\"|\"s\"",
+          "description": "Legend size"
+        },
+        {
+          "name": "hint",
+          "type": "string",
+          "description": "Group hint text"
+        },
+        {
+          "name": "errorMessage",
+          "type": "string",
+          "description": "Group error message"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Extra wrapper classes"
+        },
+        {
+          "name": "small",
+          "type": "boolean",
+          "description": "Small variant"
+        }
+      ],
+      "source": "src/components/Checkboxes/Checkboxes.schema.ts"
+    },
+    "CharacterCount": {
+      "name": "CharacterCount",
+      "props": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "description": "Unique id for textarea and message association"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Name attribute for textarea"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "required": false,
+          "description": "Current value (controlled)"
+        },
+        {
+          "name": "defaultValue",
+          "type": "string",
+          "required": false,
+          "description": "Initial value (uncontrolled)"
+        },
+        {
+          "name": "rows",
+          "type": "number",
+          "required": false,
+          "defaultValue": "5",
+          "description": "Textarea rows"
+        },
+        {
+          "name": "maxLength",
+          "type": "number",
+          "required": false,
+          "description": "Maximum characters"
+        },
+        {
+          "name": "maxWords",
+          "type": "number",
+          "required": false,
+          "description": "Maximum words (alternative to maxLength)"
+        },
+        {
+          "name": "threshold",
+          "type": "number",
+          "required": false,
+          "defaultValue": "75",
+          "description": "Threshold percentage to show counter"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "required": false,
+          "description": "Wrapper extra classes"
+        },
+        {
+          "name": "countMessageClasses",
+          "type": "string",
+          "required": false,
+          "description": "Extra classes for message element"
+        },
+        {
+          "name": "hasError",
+          "type": "boolean",
+          "required": false,
+          "description": "Force error styling"
+        },
+        {
+          "name": "describedBy",
+          "type": "string",
+          "required": false,
+          "description": "aria-describedby ids"
+        }
+      ],
+      "source": "src/components/CharacterCount/CharacterCount.schema.ts"
+    },
+    "Button": {
+      "name": "Button",
+      "category": "form",
+      "since": "0.1.1",
+      "a11yNotes": [
+        "Supports keyboard activation (Enter / Space) on links rendered with role=button.",
+        "Provides data attributes for state styling (pressed, focused, hovered, disabled)."
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "'primary' | 'secondary' | 'reverse' | 'warning' | 'login' | 'metric' | 'metric-blue' | 'metric-green' | 'metric-warning'",
+          "defaultValue": "primary",
+          "description": "Visual style variant (metric is a card-like variant; metric defaults to blue)",
+          "enum": [
+            "primary",
+            "secondary",
+            "reverse",
+            "warning",
+            "login",
+            "metric",
+            "metric-blue",
+            "metric-green",
+            "metric-warning"
+          ]
+        },
+        {
+          "name": "size",
+          "type": "'default' | 'small' | 'large'",
+          "defaultValue": "default",
+          "description": "Size variant",
+          "enum": [
+            "default",
+            "small",
+            "large"
+          ]
+        },
+        {
+          "name": "fullWidth",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Expands to full container width"
+        },
+        {
+          "name": "preventDoubleClick",
+          "type": "boolean",
+          "defaultValue": "false",
+          "description": "Prevents accidental double submissions"
+        },
+        {
+          "name": "href",
+          "type": "string",
+          "description": "Render as link when provided"
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "description": "Anchor target when rendering as link"
+        },
+        {
+          "name": "rel",
+          "type": "string",
+          "description": "Anchor rel when rendering as link"
+        },
+        {
+          "name": "aria-disabled",
+          "type": "'true' | 'false'",
+          "description": "Use for disabling anchor links (no native disabled on <a>)"
+        },
+        {
+          "name": "type",
+          "type": "'button' | 'submit' | 'reset'",
+          "defaultValue": "button",
+          "description": "Button type attribute (button only)"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "description": "Disables the button (button element only)"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode|string",
+          "required": true,
+          "description": "Button content (text or nodes). For macros, use `text` or `html`."
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "description": "Additional CSS classes"
+        }
+      ],
+      "source": "src/components/Button/Button.schema.ts"
+    }
+  },
+  "categories": {
+    "form": [
+      "Textarea",
+      "Select",
+      "Radios",
+      "Label",
+      "Input",
+      "Fieldset",
+      "ErrorSummary",
+      "ErrorMessage",
+      "DateInput",
+      "Button"
+    ],
+    "meta": [
+      "Tag"
+    ],
+    "content": [
+      "Panel",
+      "InsetText",
+      "Details"
+    ],
+    "typography": [
+      "Hint",
+      "Heading"
+    ],
+    "uncategorised": [
+      "Checkboxes",
+      "CharacterCount"
+    ]
+  }
+}

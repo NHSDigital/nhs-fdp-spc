@@ -11,3 +11,46 @@
 !project.code-workspace
 
 # Please, add your custom content below!
+
+# Restored from commit 5247091e (First phase of nunjucks parity and proper progressive enhancement)
+# Dependencies
+node_modules
+.DS_Store
+
+# Build outputs
+storybook-static/
+packages/nhs-fdp/dist/
+
+# Logs
+logs/
+*.log
+*storybook.log
+
+# Test results
+test-results/
+playwright-report/
+coverage/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+.tokens.hash
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+dist-dev/
+/examples
