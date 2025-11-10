@@ -1,5 +1,5 @@
 {
-  "name": "@nhs-fdp/spc",
+  "name": "@fergusbisset/spc",
   "version": "0.0.1-alpha.0",
   "description": "Statistical Process Control (SPC) components and engine for the NHS FDP Design System",
   "type": "module",
@@ -13,7 +13,8 @@
     "LICENSE"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   },
   "exports": {
     ".": {
