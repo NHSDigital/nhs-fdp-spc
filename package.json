@@ -1,5 +1,5 @@
 {
-  "name": "@fergusbisset/spc",
+  "name": "@nhsdigital/spc",
   "version": "0.0.1-alpha.0",
   "description": "Statistical Process Control (SPC) components and engine for the NHS FDP Design System",
   "type": "module",
@@ -43,8 +43,8 @@
   },
   "dependencies": {},
   "scripts": {
-    "build": "vite build --config ../../config/vite.spc.config.ts && vite build --config ../../config/vite.spc.css.config.ts",
-    "exports:check": "node ../../scripts/spc-export-check.cjs",
+    "build": "node ./scripts/build-spc.mjs",
+    "exports:check": "node ./scripts/spc-export-check.cjs",
     "prepublishOnly": "npm run exports:check && npm run build",
     "test": "vitest run --dir ./tests"
   }
