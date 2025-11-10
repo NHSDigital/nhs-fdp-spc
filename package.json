@@ -1,0 +1,40 @@
+{
+  "name": "@nhs-fdp/spc",
+  "version": "0.0.0-internal.0",
+  "private": true,
+  "description": "Statistical Process Control (SPC) components and engine (internal package – subject to change)",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs"
+    },
+    "./engine": {
+      "types": "./dist/engine/index.d.ts",
+      "import": "./dist/engine/index.esm.js",
+      "require": "./dist/engine/index.cjs"
+    },
+    "./icons": {
+      "types": "./dist/icons/index.d.ts",
+      "import": "./dist/icons/index.esm.js",
+      "require": "./dist/icons/index.cjs"
+    },
+    "./styles": "./dist/spc.css"
+  },
+  "sideEffects": [
+    "dist/**/*.css"
+  ],
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build": "vite build --config ../../config/vite.spc.config.ts && vite build --config ../../config/vite.spc.css.config.ts",
+    "test": "vitest run --dir ./tests"
+  }
+}
