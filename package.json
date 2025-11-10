@@ -1,12 +1,20 @@
 {
   "name": "@nhs-fdp/spc",
-  "version": "0.0.0-internal.0",
-  "private": true,
-  "description": "Statistical Process Control (SPC) components and engine (internal package – subject to change)",
+  "version": "0.0.1-alpha.0",
+  "description": "Statistical Process Control (SPC) components and engine for the NHS FDP Design System",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -35,6 +43,8 @@
   "dependencies": {},
   "scripts": {
     "build": "vite build --config ../../config/vite.spc.config.ts && vite build --config ../../config/vite.spc.css.config.ts",
+    "exports:check": "node ../../scripts/spc-export-check.cjs",
+    "prepublishOnly": "npm run exports:check && npm run build",
     "test": "vitest run --dir ./tests"
   }
 }

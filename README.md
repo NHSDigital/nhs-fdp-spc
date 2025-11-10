@@ -26,7 +26,38 @@ export default function Example() {
 }
 ```
 
-## Development
+## Installation (External via GitHub Packages)
+
+Until this package is on npmjs, install from GitHub Packages. First, authenticate npm to GitHub Packages (once per machine):
+
+Create a `.npmrc` in your user home directory or project root with:
+
+```ini
+@nhs-fdp:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+```
+
+Then install the alpha build:
+
+```bash
+npm install @nhs-fdp/spc@alpha
+```
+
+Usage in your app:
+
+```tsx
+import { SPCChart } from '@nhs-fdp/spc';
+// Import the minimal SPC CSS bundle
+import '@nhs-fdp/spc/styles';
+```
+
+Notes:
+
+- Your GitHub token needs the “read:packages” scope (and access to the repository if private).
+- If your project has a `.npmrc` with a default registry, ensure the scoped registry line for `@nhs-fdp` is present as above.
+- Types ship with the package; no extra typings install is needed.
+
+## Export Surface (Initial)
 
 This repo is currently a mirror. To contribute code:
 1. Work in the monorepo under `packages/nhs-fdp-spc`
