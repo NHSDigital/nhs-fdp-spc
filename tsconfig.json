@@ -1,0 +1,18 @@
+{
+  "extends": "../../config/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": [
+    "./src/**/*",
+    "../../src/components/DataVisualisation/charts/SPC/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.*"
+  ]
+}
