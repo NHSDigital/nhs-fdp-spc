@@ -161,7 +161,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.2",
     "@eslint/eslintrc": "^3.3.1",
-    "@playwright/test": "^1.54.1",
+    "@playwright/test": "^1.56.1",
     "@storybook/addon-a11y": "^10.0.5",
     "@storybook/addon-docs": "^10.0.5",
     "@storybook/addon-vitest": "^10.0.5",
@@ -193,7 +193,7 @@
     "mermaid": "^10.9.4",
     "next": "^15.0.3",
     "nunjucks": "^3.2.4",
-    "playwright": "^1.54.1",
+    "playwright": "^1.56.1",
     "prettier": "^3.6.2",
     "prismjs": "^1.30.0",
     "remark-gfm": "^4.0.1",
